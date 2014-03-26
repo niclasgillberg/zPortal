@@ -53,8 +53,16 @@ module.exports = function(grunt){
 					logConcurrentOutput: true
 				}
 			}
+		},
+		shell: {
+			mongo: {
+				command: 'mongod',
+				options: {
+					async: true
+				}
+			}
 		}
 	});
 
-	grunt.registerTask('default', ['concurrent:target']);
+	grunt.registerTask('default', ['shell:mongo','concurrent:target']);
 };
