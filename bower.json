@@ -1,0 +1,22 @@
+{
+  "name": "Crello",
+  "version": "0.0.1",
+  "homepage": "https://github.com/niclassahlin/Crello",
+  "authors": [
+    "Niclas Sahlin <niclas@niclassahlin.com>"
+  ],
+  "main": "server.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ]
+}
