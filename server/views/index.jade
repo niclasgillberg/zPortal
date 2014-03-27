@@ -1,5 +1,9 @@
-extends layout
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    #applicationHost
 
-block content
-  h1= title
-  p Welcome to #{title}
+    script(type="text/javascript", src="/vendor/requirejs/require.js", data-main="/js/main")
