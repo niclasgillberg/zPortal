@@ -1,4 +1,4 @@
-define(['plugins/router'], function(router){
+define(['plugins/router', 'bootstrap', 'jquery'], function(router, bootstrap, $){
 	return {
 		activate: function(){
 			router.map([
@@ -7,6 +7,14 @@ define(['plugins/router'], function(router){
 
 			return router.activate();
 		},
-		router: router
+		router: router,
+		attached: function(view){
+			var group = $('.navbar-form[role="search"] .input-group');
+			group.find('input').on('focus', function(){
+				group.addClass('focused');
+			}).on('blur', function(){
+				group.removeClass('focused');
+			});
+		}
 	};
 });

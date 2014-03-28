@@ -26,7 +26,7 @@ module.exports = function(grunt){
 		stylus: {
 			compile: {
 				files: {
-					'public/css/application.css': ['client/styles/*.styl']
+					'public/css/application.css': ['client/styles/application.styl']
 				}
 			}
 		},
@@ -39,7 +39,7 @@ module.exports = function(grunt){
 				}
 			},
 			javascript: {
-				files: 'client/**/*.js',
+				files: ['client/**/*.js', 'client/**/*.html'],
 				tasks: ['copy:js'],
 				options: {
 					atBegin: true

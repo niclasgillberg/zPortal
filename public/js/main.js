@@ -14,7 +14,7 @@ requirejs.config({
 			exports: 'jQuery'
 		}
 	}
-})
+});
 
 define(['durandal/system', 'durandal/app', 'durandal/viewLocator'], function(system,app,viewLocator){
 	system.debug(true);
