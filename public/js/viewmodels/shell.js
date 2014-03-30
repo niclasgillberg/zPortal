@@ -15,6 +15,9 @@ define(['plugins/router', 'bootstrap', 'jquery'], function(router, bootstrap, $)
 			}).on('blur', function(){
 				group.removeClass('focused');
 			});
+		},
+		logout: function(){
+			window.location = '/logout';
 		}
 	};
 });

@@ -1,9 +1,6 @@
 nav.navbar
   background-color header-back-color;
 
-  .btn-inverse
-    background-color lighten(header-back-color, 20%)
-    border-color darken(header-back-color, 20%)
 
   .navbar-nav
     & > .active > a
@@ -21,16 +18,9 @@ nav.navbar
 
 
     input[type='text']
-      background-color lighten(header-back-color, 10%)
-      border-color darken(header-back-color, 40%)
-      color header-front-color
-
       &:focus
         -webkit-box-shadow: none
         -moz-box-shadow: none
         box-shadow: none
-
-    button
-      z-index: 2
     @media screen-sm
       width: 300px;
