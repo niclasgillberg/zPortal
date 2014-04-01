@@ -21,10 +21,15 @@ passport.use(new LocalStrategy(
 ));
 
 passport.serializeUser(function(user, done){
-	return done(null, 'admin');
+	return done(null, user._id);
 });
 passport.deserializeUser(function(id, done){
-	return done(null, {username: 'Niclas'});
+	User.findOne({_id: id}, function(err, user){
+		if(err) return done(err);
+		if(!user) return done(null, false, {message: 'User invalid'});
+
+		return done(null, user);
+	});
 });
 
 exports.authenticate = function(req, res, next){

@@ -21,7 +21,7 @@ exports.initialize = function initialize(app){
 	app.post('/register', function(req, res){
 		console.log('Registering ' + req.body.username);
 		var userexists = User.findOne({username: req.body.username}, function(err, user){
-			console.log('Error: ' + err)
+			console.log('Error: ' + err);
 			if(err) throw new Error(500);
 
 			console.log('User: ' + user);

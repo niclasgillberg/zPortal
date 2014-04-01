@@ -6,12 +6,21 @@ module.exports = function(grunt){
 		pkg: grunt.file.readJSON('package.json'),
 		nodemon: {
 			dev:{
-				script: 'src/server.js',
+				script: 'src/server/app.js',
 				options: {
 					env: {
 						PORT: 8888
 					},
-					ext: 'js'
+					ext: 'js',
+					watch: ['src/server'],
+					callback: function(nodemon){
+						nodemon.on('config:update', function () {
+							// Delay before server listens on port
+							setTimeout(function() {
+								require('open')('http://localhost:8888');
+							}, 1000);
+						});
+					}
 				}
 			}
 		},
