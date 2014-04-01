@@ -10,7 +10,7 @@ module.exports = {
 function initialize() {
 
 	var express = require('express');
-	var routes = require('./routes');
+	var routes = require('./routes/index');
 	var user = require('./routes/user');
 	var http = require('http');
 	var path = require('path');
@@ -34,8 +34,8 @@ function initialize() {
 	app.use(passport.initialize());
 	app.use(passport.session());
 	app.use(app.router);
-	app.use(express.static(path.join(__dirname, '../public')));
-	app.use('/vendor', express.static(path.join(__dirname, '../vendor')));
+	app.use(express.static(path.join(__dirname, '../../public')));
+	app.use('/vendor', express.static(path.join(__dirname, '../../vendor')));
 
 	app.use(function (err, req, res, next) {
 		if (err instanceof Error) {

@@ -6,7 +6,7 @@ module.exports = function(grunt){
 		pkg: grunt.file.readJSON('package.json'),
 		nodemon: {
 			dev:{
-				script: 'server.js',
+				script: 'src/server.js',
 				options: {
 					env: {
 						PORT: 8888
@@ -19,27 +19,27 @@ module.exports = function(grunt){
 			js: {
 				src: ['**/*.js', '**/*.html'],
 				dest: 'public/js/',
-				cwd: 'client/',
+				cwd: 'src/client/',
 				expand: true
 			}
 		},
 		stylus: {
 			compile: {
 				files: {
-					'public/css/application.css': ['client/styles/application.styl']
+					'public/css/application.css': ['src/client/styles/application.styl']
 				}
 			}
 		},
 		watch: {
 			styles: {
-				files: 'client/styles/*.styl',
+				files: 'src/client/styles/*.styl',
 				tasks: ['stylus:compile'],
 				options: {
 					atBegin: true
 				}
 			},
 			javascript: {
-				files: ['client/**/*.js', 'client/**/*.html'],
+				files: ['src/client/**/*.js', 'src/client/**/*.html'],
 				tasks: ['copy:js'],
 				options: {
 					atBegin: true
