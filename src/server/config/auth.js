@@ -4,6 +4,7 @@ var User = require('../models/user').User;
 
 passport.use(new LocalStrategy(
 		function(username, password, done){
+			console.log('Authenticating...');
 			User.findOne({username: username}, function(err, user){
 				if(err) return done(err);
 				if(!user) return done(null, false, {message: 'Invalid credentials'});

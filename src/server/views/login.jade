@@ -2,24 +2,19 @@ doctype html
 html
   head
     title Login | Crello
-    link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/vendor/pure/pure.css')
     link(rel='stylesheet', href='/css/application.css')
   body
     .container
       h1.col-sm-offset-2 Login
 
-      form#login-form.form-horizontal(action='/login', method='post')
-        .form-group
-          label.col-sm-2.control-label(for='username') Username
-          .col-sm-10
-            input#username.form-control(type='text', name='username')
-        .form-group
-          label.col-sm-2.control-label(for='password') Password
-          .col-sm-10
-            input#password.form-control(type='password', name='password')
-        .form-group
-          .col-sm-8.col-sm-offset-2
-            button.btn.btn-inverse(type='submit') Login
-          .col-sm-2
-            .pull-right
-              a(href='/register') Register
+      form#login-form.pure-form.pure-form-aligned(action='/login', method='post')
+        .pure-control-group
+          label(for='username') Username
+          input#username(type='text', name='username')
+        .pure-control-group
+          label(for='password') Password
+          input#password(type='password', name='password')
+        .pure-controls
+          button.pure-button(type='submit') Login
+          a(href='/register') Register
