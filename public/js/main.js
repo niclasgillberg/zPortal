@@ -5,6 +5,7 @@ requirejs.config({
 		plugins: '../vendor/durandal/js/plugins',
 		transitions: '../vendor/durandal/js/transitions',
 		knockout: '../vendor/knockout.js/knockout',
+    knockoutEs5: '../vendor/knockout-es5-passy/dist/knockout-es5',
 		bootstrap: '../vendor/bootstrap/dist/js/bootstrap',
 		jquery: '../vendor/jquery/jquery'
 	},
@@ -24,7 +25,9 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator'], function(sys
 	app.configurePlugins({
 		router: true,
 		widget: true,
-		dialog: true
+		dialog: {
+      messageBoxView: 'views/messagebox.html'
+    }
 	});
 
 	app.start().then(function(){

@@ -24,7 +24,9 @@
     "durandal": "~2.0.1",
     "normalize-css": "~3.0.1",
     "font-awesome": "~4.0.3",
-    "pure": "~0.4.2"
+    "pure": "~0.4.2",
+    "knockout.js": "~3.0.0",
+    "knockout-es5-passy": "~0.0.1"
   },
   "resolutions": {
     "jquery": ">= 2.1.0"

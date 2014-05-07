@@ -1,7 +1,7 @@
 var auth = require('../config/auth');
 
 exports.initialize = function(app){
-	app.get('/', auth.authenticate, function(req, res){
+	app.get('/', function(req, res){
 		res.render('index', { title: 'Express' });
 	});
 };
