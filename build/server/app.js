@@ -23,7 +23,7 @@
 
   app.set('views', path.join(__dirname, 'views'));
 
-  app.set('view enging', 'jade');
+  app.set('view engine', 'jade');
 
   app.use(express.favicon());
 
@@ -59,7 +59,9 @@
   app.use('/vendor', express["static"](path.join(__dirname, '../../vendor')));
 
   app.use(function(err, req, res, next) {
-    if (err(instanceif(Error))) {
+    console.log('Rquest!');
+    if (err instanceof Error) {
+      console.log(err);
       if (err.message === '401' && req.method === 'GET') {
         return res.redirect('/login');
       } else if (err.message === '401') {

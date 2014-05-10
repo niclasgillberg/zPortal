@@ -14,7 +14,7 @@ requirejs.config
       deps: ['jquery']
       exports: 'jQuery'
 
-define ['durandal/system', 'durandal/app', 'durandal/viewLocaltor'], (system, app, viewLocator) ->
+define ['durandal/system', 'durandal/app', 'durandal/viewLocator'], (system, app, viewLocator) ->
   system.debug true
 
   app.title = 'Service Market'

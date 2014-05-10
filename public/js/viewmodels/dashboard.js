@@ -1,5 +1,5 @@
 (function() {
-  define(['dirandal/app', 'knockoutEs5'], function(app, ko) {
+  define(['durandal/app', 'knockoutEs5'], function(app, ko) {
     var Dashboard;
     return Dashboard = (function() {
       function Dashboard() {

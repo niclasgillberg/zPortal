@@ -1,4 +1,4 @@
-define ['dirandal/app', 'knockoutEs5'], (app, ko) ->
+define ['durandal/app', 'knockoutEs5'], (app, ko) ->
   class Dashboard
     constructor: ->
       @boards = ['test','asd']

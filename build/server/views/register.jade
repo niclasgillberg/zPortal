@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Login | Crello
+    link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/application.css')
+  body
+    .container
+      h1.col-sm-offset-2 Register
+      form#login-form.form-horizontal(action='/register', method='post')
+        .form-group
+          label.col-sm-2.control-label(for='username') Username
+          .col-sm-10
+            input#username.form-control(type='text', name='username')
+        .form-group
+          label.col-sm-2.control-label(for='email') Email
+          .col-sm-10
+            input#username.form-control(type='email', name='email')
+        .form-group
+          label.col-sm-2.control-label(for='password') Password
+          .col-sm-10
+            input#password.form-control(type='password', name='password')
+        .form-group
+          .col-sm-10.col-sm-offset-2
+            button.btn.btn-inverse(type='submit') Register

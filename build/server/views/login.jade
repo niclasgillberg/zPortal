@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title Login | Crello
+    link(rel='stylesheet', href='/vendor/pure/pure.css')
+    link(rel='stylesheet', href='/css/application.css')
+  body
+    .container
+      h1.col-sm-offset-2 Login
+
+      form#login-form.pure-form.pure-form-aligned(action='/login', method='post')
+        .pure-control-group
+          label(for='username') Username
+          input#username(type='text', name='username')
+        .pure-control-group
+          label(for='password') Password
+          input#password(type='password', name='password')
+        .pure-controls
+          button.pure-button(type='submit') Login
+          a(href='/register') Register

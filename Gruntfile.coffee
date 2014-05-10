@@ -35,6 +35,11 @@ module.exports = (grunt) ->
         dest: 'public/js/'
         cwd: 'src/client/'
         expand: true
+      jade:
+        src: ['**/*.jade']
+        dest: 'build/server/'
+        cwd: 'src/server'
+        expand: true
     stylus:
       compile:
         files:
@@ -63,6 +68,11 @@ module.exports = (grunt) ->
       serverCoffeeCompile:
         files: 'src/server/**/*.coffee'
         tasks: ['coffee:server']
+        options:
+          atBegin: true
+      serverJade:
+        files: 'src/server/**/*.jade'
+        tasks: ['copy:jade']
         options:
           atBegin: true
 #      serverTests:
@@ -107,6 +117,7 @@ module.exports = (grunt) ->
         src: '**/*.coffee'
         dest: 'public/js/'
         ext: '.js'
+        sourceMap: true
       server:
         expand: true
         cwd: 'src/server'
