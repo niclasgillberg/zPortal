@@ -1,14 +1,20 @@
-define(['durandal/app', 'knockoutEs5'], function(app, ko, boardService){
-	var Dashboard = function(){
-		this.boards = ['test', 'asd'];
+(function() {
+  define(['dirandal/app', 'knockoutEs5'], function(app, ko) {
+    var Dashboard;
+    return Dashboard = (function() {
+      function Dashboard() {
+        this.boards = ['test', 'asd'];
+        ko.track(this);
+      }
 
-    ko.track(this);
-	};
+      Dashboard.prototype.addBoard = function() {
+        this.boards.push('dsa');
+        app.showMessage('Hello dialog');
+      };
 
-  Dashboard.prototype.addOrganization = function () {
-    this.boards.push('dsa');
-    app.showMessage('Hello Dialog');
-  };
+      return Dashboard;
 
-	return Dashboard;
-})
+    })();
+  });
+
+}).call(this);

@@ -1,15 +1,16 @@
-define(['durandal/app'], function (app) {
-  var UserModule = function(){
+(function() {
+  define(['dirandal/app'], function(app) {
+    var UserModule;
+    return UserModule = (function() {
+      function UserModule() {}
 
-  };
+      UserModule.prototype.activate = function() {};
 
-  UserModule.prototype.activate = function () {
+      UserModule.prototype.showLogin = function() {};
 
-  };
+      return UserModule;
 
-  UserModule.prototype.showLogin = function () {
+    })();
+  });
 
-  };
-
-  return UserModule;
-});
+}).call(this);

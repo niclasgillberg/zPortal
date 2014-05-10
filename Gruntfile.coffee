@@ -7,22 +7,18 @@ module.exports = function(grunt){
 		pkg: grunt.file.readJSON('package.json'),
 		nodemon: {
 			dev:{
-				script: 'src/server/app.js',
+				script: 'build/server/app.js',
 				options: {
 					env: {
 						PORT: 8888
 					},
 					ext: 'js',
-					watch: ['src/server'],
+					watch: ['build/server'],
 					callback: function(nodemon){
 						nodemon.on('log', function (event) {
 							console.log(event.colour);
 						});
 						nodemon.on('config:update', function () {
-							// Delay before server listens on port
-							setTimeout(function() {
-								require('open')('http://localhost:8888');
-							}, 1000);
 							growl('Server has started');
 							console.log('Server has started');
 						});
@@ -89,6 +85,13 @@ module.exports = function(grunt){
 					atBegin: true
 				}
 			},
+      serverCoffeCompile: {
+        files: ['src/server/**/*.coffee'],
+        tasks: ['coffee:server'],
+        options: {
+          atBegin: true
+        }
+      },
 			serverTests: {
 				files: ['src/server/**/*.js', 'spec/server/**/*.js'],
 				tasks: ['mochaTest:test'],
@@ -151,6 +154,13 @@ module.exports = function(grunt){
         cwd: 'src/client/',
         src: ['**/*.coffee'],
         dest: 'public/js/',
+        ext: '.js'
+      },
+      server: {
+        expand: true,
+        cwd: 'src/server',
+        src: '**/*.coffee',
+        dest: 'build/server',
         ext: '.js'
       }
     }
