@@ -1,3 +1,14 @@
+/**
+ * The dialog module enables the display of message boxes, custom modal dialogs and other overlays or slide-out UI abstractions. Dialogs are constructed by the composition system which interacts with a user defined dialog context. The dialog module enforced the activator lifecycle.
+ * @module dialog
+ * @requires system
+ * @requires app
+ * @requires composition
+ * @requires activator
+ * @requires viewEngine
+ * @requires jquery
+ * @requires knockout
+ */
 define(['durandal/system', 'durandal/app', 'durandal/composition', 'durandal/activator', 'durandal/viewEngine', 'jquery', 'knockout'], function (system, app, composition, activator, viewEngine, $, ko) {
   var contexts = {},
       dialogCount = 0,
@@ -384,11 +395,6 @@ define(['durandal/system', 'durandal/app', 'durandal/composition', 'durandal/act
           var height = $child.outerHeight(false);
           var windowHeight = $(window).height();
           var constrainedHeight = Math.min(height, windowHeight);
-
-          $child.css({
-            'margin-top': (-constrainedHeight / 2).toString() + 'px',
-            'margin-left': (-width / 2).toString() + 'px'
-          });
 
           if (!$child.data("predefinedWidth")) {
             //Ensure the correct width after margin-left has been set

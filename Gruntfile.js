@@ -40,8 +40,8 @@ module.exports = function(grunt){
 			}
 		},
 		copy: {
-			js: {
-				src: ['**/*.js', '**/*.html'],
+			html: {
+				src: ['**/*.html'],
 				dest: 'public/js/',
 				cwd: 'src/client/',
 				expand: true
@@ -63,8 +63,15 @@ module.exports = function(grunt){
 				}
 			},
 			clientJsCopy: {
-				files: ['src/client/**/*.js', 'src/client/**/*.html'],
-				tasks: ['copy:js'],
+				files: ['src/client/**/*.coffee'],
+				tasks: ['coffee:client'],
+				options: {
+					atBegin: true
+				}
+			},
+			clientTmplCopy: {
+				files: ['src/client/**/*.html'],
+				tasks: ['copy:html'],
 				options: {
 					atBegin: true
 				}
@@ -124,7 +131,16 @@ module.exports = function(grunt){
 					message: 'Server has crashed'
 				}
 			}
-		}
+		},
+    coffee: {
+      client: {
+        expand: true,
+        cwd: 'src/client/',
+        src: ['**/*.coffee'],
+        dest: 'public/js/',
+        ext: '.js'
+      }
+    }
 	});
 
 	// On watch events, if the changed file is a test file then configure mochaTest to only
