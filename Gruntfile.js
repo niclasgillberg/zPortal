@@ -40,6 +40,12 @@ module.exports = function(grunt){
 			}
 		},
 		copy: {
+      js: {
+        src: ['**/*.js'],
+        dest: 'public/js/',
+        cwd: 'src/client/',
+        expand: true
+      },
 			html: {
 				src: ['**/*.html'],
 				dest: 'public/js/',
@@ -62,9 +68,16 @@ module.exports = function(grunt){
 					atBegin: true
 				}
 			},
-			clientJsCopy: {
+			clientCoffeCompile: {
 				files: ['src/client/**/*.coffee'],
 				tasks: ['coffee:client'],
+				options: {
+					atBegin: true
+				}
+			},
+			clientJsCopy: {
+				files: ['src/client/**/*.js'],
+				tasks: ['copy:js'],
 				options: {
 					atBegin: true
 				}
