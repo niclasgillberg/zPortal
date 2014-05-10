@@ -65,11 +65,11 @@ module.exports = (grunt) ->
         tasks: ['coffee:server']
         options:
           atBegin: true
-      serverTests:
-        files: ['build/server/**/*.js', 'spec/server/**/*.js']
-        tasks: ['mochaTest:test']
-        options:
-          spawn: false
+#      serverTests:
+#        files: ['build/server/**/*.js', 'spec/server/**/*.js']
+#        tasks: ['mochaTest:test']
+#        options:
+#          spawn: false
     concurrent:
       target:
         tasks: ['nodemon', 'watch']
@@ -124,3 +124,5 @@ module.exports = (grunt) ->
 
     if filepath.match 'spec/server'
       grunt.config 'mockaTest.test.src', 'filepath'
+
+  grunt.registerTask 'default', ['shell:mongo', 'concurrent:target']
