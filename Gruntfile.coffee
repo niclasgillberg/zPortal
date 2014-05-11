@@ -61,8 +61,8 @@ module.exports = (grunt) ->
         options:
           atBegin: true
       clientTmplCopy:
-        files: 'src/client/**/*.html'
-        tasks: ['copy:html']
+        files: 'src/client/**/*.jade'
+        tasks: ['jade:client']
         options:
           atBegin: true
       serverCoffeeCompile:
@@ -125,6 +125,18 @@ module.exports = (grunt) ->
         src: '**/*.coffee'
         dest: 'build/server'
         ext: '.js'
+    jade:
+      client:
+        files: [
+          cwd: 'src/client/'
+          src: '**/*.jade'
+          dest: 'public/js/'
+          expand: true,
+          ext: '.html'
+        ]
+        options:
+          client: false
+
 
 
   # On watch events, if the changed file is a test file then configure mochaTest to only

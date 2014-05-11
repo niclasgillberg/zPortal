@@ -41,6 +41,7 @@
     "karma": "^0.12.3",
     "grunt-karma": "^0.8.2",
     "growl": "^1.7.0",
-    "grunt-contrib-coffee": "^0.10.1"
+    "grunt-contrib-coffee": "^0.10.1",
+    "grunt-contrib-jade": "^0.11.0"
   }
 }

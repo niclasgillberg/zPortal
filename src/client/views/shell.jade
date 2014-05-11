@@ -1,0 +1,16 @@
+div
+  nav.menu(role="navigation")
+    a.branding(href="#")
+      i.fa.fa-home
+      span Crello
+    ul
+      // ko foreach: router.navigationModel
+      li(data-bind="css: {active: isActive}")
+        a(data-bind="attr: {href: hash}, html: title")
+      // /ko
+    ul.right
+      li
+        button.btn.btn-inverse(data-bind="click: logout") Logout
+  #working-area.container-fluid.page-host(data-bind="router: {transtition: 'entrance', cacheViews: true}")
+
+  footer.container-fluid
