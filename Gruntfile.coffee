@@ -90,12 +90,13 @@ module.exports = (grunt) ->
         command: 'mongod'
         options:
           async: true
-    monchaTest:
+    mochaTest:
       test:
-        src: ['spec/server/**/*.js']
+        src: ['spec/server/**/*.coffee']
         options:
           reporter: 'spec'
           clearRequireCache: true
+          require: 'coffee-script/register'
     karma:
       unit:
         configFile: 'spec/client/karma.conf.js'
