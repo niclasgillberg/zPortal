@@ -3,14 +3,9 @@
     var Dashboard;
     return Dashboard = (function() {
       function Dashboard() {
-        this.boards = ['test', 'asd'];
+        this.message = 'Hello, and welcome to zPortal!';
         ko.track(this);
       }
-
-      Dashboard.prototype.addBoard = function() {
-        this.boards.push('dsa');
-        app.showMessage('Hello dialog');
-      };
 
       return Dashboard;
 

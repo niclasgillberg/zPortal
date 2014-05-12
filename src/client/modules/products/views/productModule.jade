@@ -1,3 +1,24 @@
 div.productsModule
-  ul.products(data-bind='foreach: products')
-    li(data-bind='text: name')
+
+  ul.submenu.open
+    li
+      a(href='#')
+        i.fa.fa-laptop
+        span Hardware
+    li
+      a(href='#')
+        i.fa.fa-user
+        span Resources
+    li
+      a(href='#')
+        i.fa.fa-truck
+        span Services
+    li
+      a(href='#')
+        i.fa.fa-terminal
+        span Software
+
+  .working-area
+    ul.products(data-bind='foreach: products')
+      li(data-bind='text: name')
+

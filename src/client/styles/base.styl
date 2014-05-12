@@ -9,16 +9,69 @@ body
 a
   color accent-color
 
-#working-area
+.working-area
   position absolute
-  top header-height
-  right 0
-  bottom footer-height
+  top 0
   left 0
-  padding 10px 20px
+  right 0
+  bottom 0
   overflow scroll
+  z-index 0
 
+#main-area
+  top header-height
+  bottom footer-height
+  padding 10px 20px
 
 #login-form
   a
     line-height: line-height-base + 1;
+
+ul.submenu
+  margin 0
+  padding base-padding 0
+  position absolute
+  top 0
+  left 0
+  bottom 0
+  width submenu-size
+  background header-back-color + #111
+  color header-front-color
+  overflow-y hidden
+  overflow-x scroll
+  z-index 10
+
+  li
+    display block
+
+    a
+      padding submenu-item-padding
+      display inline-block
+      font-size 24px
+      overflow hidden
+      white-space nowrap
+
+      i
+        display inline-block
+        width submenu-size
+        margin-left -(submenu-item-padding)
+        text-align center
+
+      span
+        display none
+        font-size 18px
+        line-height 24px
+
+
+  &.open
+    width submenu-open-size
+
+    li
+      span
+        display inline-block
+
+    & + .working-area
+      left submenu-open-size
+
+  & + .working-area
+    left submenu-size

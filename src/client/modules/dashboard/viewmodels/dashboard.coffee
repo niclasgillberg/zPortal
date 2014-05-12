@@ -1,11 +1,6 @@
 define ['durandal/app', 'knockoutEs5'], (app, ko) ->
   class Dashboard
     constructor: ->
-      @boards = ['test','asd']
+      @message = 'Hello, and welcome to zPortal!'
 
       ko.track @
-
-    addBoard: ->
-      @boards.push 'dsa'
-      app.showMessage 'Hello dialog'
-      return
