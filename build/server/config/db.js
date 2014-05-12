@@ -5,7 +5,7 @@
 
   exports.mongoose = mongoose;
 
-  dbUri = process.env.MONGO_URI || 'mongodb://localhost/crello';
+  dbUri = process.env.MONGO_URI || 'mongodb://localhost/zPortal';
 
   mongoOptions = {
     db: {

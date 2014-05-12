@@ -4,7 +4,7 @@
       text: '../vendor/requirejs-text/text',
       durandal: '../vendor/durandal/js',
       plugins: '../vendor/durandal/js/plugins',
-      'plugins/crello': './plugins',
+      'plugins/zPortal': './plugins',
       transitions: '../vendor/durandal/js/transitions',
       knockout: '../vendor/knockout.js/knockout',
       knockoutEs5: '../vendor/knockout-es5-passy/dist/knockout-es5',
@@ -25,7 +25,7 @@
     app.configurePlugins({
       router: true,
       widget: true,
-      'crello/dialog': {
+      'zPortal/dialog': {
         messageBoxView: 'views/dialogbox.html'
       }
     });

@@ -1,5 +1,5 @@
 (function() {
-  define(['dirandal/app'], function(app) {
+  define(['durandal/app'], function(app) {
     var UserModule;
     return UserModule = (function() {
       function UserModule() {}

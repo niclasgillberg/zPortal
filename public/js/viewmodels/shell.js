@@ -6,12 +6,17 @@
           {
             route: '',
             title: 'Dashboard',
-            moduleId: 'viewmodels/dashboard'
+            moduleId: 'modules/dashboard/viewmodels/dashboard'
           }, {
-            route: 'boards',
-            title: 'Boards',
-            moduleId: 'viewmodels/boards',
+            route: 'products',
+            title: 'Products',
+            moduleId: 'modules/products/viewmodels/productModule',
             nav: 1
+          }, {
+            route: 'approvals',
+            title: 'Approvals',
+            moduleId: 'modules/orders/viewmodels/approvals',
+            nav: 2
           }
         ])).buildNavigationModel().activate();
       },

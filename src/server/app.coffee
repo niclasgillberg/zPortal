@@ -18,9 +18,9 @@ app.use express.logger 'dev'
 app.use express.json()
 app.use express.urlencoded()
 app.use express.methodOverride()
-app.use express.cookieParser 'Crello_53CR37'
+app.use express.cookieParser 'zPortal_53CR37'
 app.use express.session
-  secret: 'Crello 53CR37'
+  secret: 'zPortal 53CR37'
   cookie:
     maxAge: 3600000
   store: new MongoStore
@@ -33,9 +33,7 @@ app.use express.static path.join __dirname, '../../public'
 app.use '/vendor', express.static path.join __dirname, '../../vendor'
 
 app.use (err, req, res, next) ->
-  console.log 'Rquest!'
   if err instanceof Error
-    console.log err
     if err.message is '401' and req.method is 'GET'
       res.redirect '/login'
     else if err.message is '401'
@@ -49,4 +47,4 @@ app.use express.errorHandler() if (app.get 'env') is 'development'
 (require './routes/auth').initialize app
 
 (http.createServer app).listen (app.get 'port'), ->
-  console.log 'Express server for Crello is listening on port ' + app.get 'port'
+  console.log 'Express server for zPortal is listening on port ' + app.get 'port'

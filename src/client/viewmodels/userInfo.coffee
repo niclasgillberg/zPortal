@@ -1,4 +1,4 @@
-define ['dirandal/app'], (app) ->
+define ['durandal/app'], (app) ->
   class UserModule
     activate: ->
 

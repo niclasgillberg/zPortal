@@ -35,10 +35,10 @@
 
   app.use(express.methodOverride());
 
-  app.use(express.cookieParser('Crello_53CR37'));
+  app.use(express.cookieParser('zPortal_53CR37'));
 
   app.use(express.session({
-    secret: 'Crello 53CR37',
+    secret: 'zPortal 53CR37',
     cookie: {
       maxAge: 3600000
     },
@@ -59,9 +59,7 @@
   app.use('/vendor', express["static"](path.join(__dirname, '../../vendor')));
 
   app.use(function(err, req, res, next) {
-    console.log('Rquest!');
     if (err instanceof Error) {
-      console.log(err);
       if (err.message === '401' && req.method === 'GET') {
         return res.redirect('/login');
       } else if (err.message === '401') {
@@ -80,7 +78,7 @@
   (require('./routes/auth')).initialize(app);
 
   (http.createServer(app)).listen(app.get('port'), function() {
-    return console.log('Express server for Crello is listening on port ' + app.get('port'));
+    return console.log('Express server for zPortal is listening on port ' + app.get('port'));
   });
 
 }).call(this);

@@ -1,0 +1,9 @@
+.approvals
+  .currentApprovals(data-bind='if: approvals.length')
+    | These orders are waiting for your approval
+    ul(data-bind='foreach: approvals')
+      li
+        | Approval
+        span(data-bind='text: $index')
+  div(data-bind='if: !approvals.length')
+    | There are no orders to approve

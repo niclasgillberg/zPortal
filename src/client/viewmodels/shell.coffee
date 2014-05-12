@@ -1,8 +1,9 @@
 define ['plugins/router', 'bootstrap', 'jquery'], (router, bootstrap, $) ->
   activate: ->
     (router.map [
-      {route: '', title: 'Dashboard', moduleId: 'viewmodels/dashboard'},
-      {route: 'boards', title: 'Boards', moduleId: 'viewmodels/boards', nav: 1}
+      {route: '', title: 'Dashboard', moduleId: 'modules/dashboard/viewmodels/dashboard'},
+      {route: 'products', title: 'Products', moduleId: 'modules/products/viewmodels/productModule', nav: 1},
+      {route: 'approvals', title: 'Approvals', moduleId: 'modules/orders/viewmodels/approvals', nav: 2}
     ]).buildNavigationModel().activate()
   router: router
   attached: (view) ->
