@@ -43,7 +43,7 @@ module.exports = (grunt) ->
     stylus:
       compile:
         files:
-          'public/css/application.css': ['src/client/stylus/application.styl']
+          'public/css/application.css': ['src/client/styles/application.styl']
     watch:
       styles:
         files: 'src/client/styles/**/*.styl'
