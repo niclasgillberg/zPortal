@@ -3,21 +3,20 @@
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   define(['knockoutEs5', '../../../models/base'], function(ko, BaseModel) {
-    var Product;
-    return Product = (function(_super) {
-      __extends(Product, _super);
+    var Software;
+    return Software = (function(_super) {
+      __extends(Software, _super);
 
-      Product.type = Product;
+      Software.type = Software;
 
-      Product.resource = 'product';
+      Software.resource = 'software';
 
-      function Product(values) {
-        this.name = "A product called '" + values.name + "'";
-        this.type = values.type;
+      function Software(_arg) {
+        this.name = _arg.name, this.type = _arg.type;
         ko.track(this);
       }
 
-      return Product;
+      return Software;
 
     })(BaseModel);
   });

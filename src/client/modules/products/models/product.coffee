@@ -1,16 +1,11 @@
-define ['knockoutEs5'], (ko) ->
-  class Product
-    constructor: (name, type) ->
-      @name = name
-      @type = type
+define ['knockoutEs5', '../../../models/base'], (ko, BaseModel) ->
+  class Product extends BaseModel
+    @type = Product
+    @resource = 'product'
 
+    constructor: (values) ->
+      @name = "A product called '#{values.name}'"
+      @type = values.type
       ko.track @
 
 
-    # Static methods
-
-    @all: ->
-      products = []
-      for i in [1..10]
-        products.push new Product "Product #{i}", 1
-      products

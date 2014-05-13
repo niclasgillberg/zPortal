@@ -18,7 +18,18 @@ div.productsModule
         i.fa.fa-terminal
         span Software
 
+  ul.submenu.open
+    li
+      a(href='#')
+
+
   .working-area
+
+    h2 Products
     ul.products.bare(data-bind='foreach: products')
+      li(data-bind='text: name')
+
+    h3 Software
+    ul.software.bare(data-bind='foreach: software')
       li(data-bind='text: name')
 

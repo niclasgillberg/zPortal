@@ -29,14 +29,23 @@ nav.menu
     li
       display inline-block
 
+      &.active
+        a
+          span
+            border-bottom 3px solid secondary-accent-color
+
       a
         display inline-block
-        padding 5px 15px
-        text-decoration: none
+        padding 0 15px
+        text-decoration none
         font-size 20px
 
         &:hover
           text-decoration: underline
+
+        span
+          display inline-block
+          padding 5px 0 3px
 
   .right
     float right

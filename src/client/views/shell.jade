@@ -5,7 +5,8 @@ div
     ul.bare
       // ko foreach: router.navigationModel
       li(data-bind="css: {active: isActive}")
-        a(data-bind="attr: {href: hash}, html: title")
+        a(data-bind='attr: {href: hash}')
+          span(data-bind='html: title')
       // /ko
     .right(data-bind='compose: "modules/profile/viewmodels/user-info"')
 
