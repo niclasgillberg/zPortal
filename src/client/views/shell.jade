@@ -2,7 +2,7 @@ div
   nav.menu(role="navigation")
     a.branding(href="#")
       | zPortal
-    ul
+    ul.bare
       // ko foreach: router.navigationModel
       li(data-bind="css: {active: isActive}")
         a(data-bind="attr: {href: hash}, html: title")
