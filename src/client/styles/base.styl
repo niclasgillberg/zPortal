@@ -17,7 +17,22 @@ a
   bottom 0
   overflow scroll
   z-index 0
-  padding base-padding
+  padding (base-padding / 2) base-padding
+
+  header
+    border-bottom 1px solid #ccc
+    margin-bottom base-padding
+
+
+    h1
+      margin 0
+      padding 0
+      float left
+      line-height (base-padding)
+
+    .search-form
+      width 25%
+      margin-bottom (base-padding / 2)
 
 #main-area
   top header-height

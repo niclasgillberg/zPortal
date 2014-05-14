@@ -1,35 +1,17 @@
 div.productsModule
 
-  ul.submenu.open
-    li
-      a(href='#')
-        i.fa.fa-laptop
-        span Hardware
-    li
-      a(href='#')
-        i.fa.fa-user
-        span Resources
-    li
-      a(href='#')
-        i.fa.fa-truck
-        span Services
-    li
-      a(href='#')
-        i.fa.fa-terminal
-        span Software
+  ul.submenu.open(data-bind='foreach: router.navigationModel')
+    li(data-bind='css: {active: isActive}')
+      a(data-bind='attr: {href: hash}')
+        i.fa(data-bind='css: icon')
+        span(data-bind='text: title')
 
   ul.submenu.open
     li
       a(href='#')
 
 
-  .working-area
+  .working-area.page-host(data-bind="router: {transition: 'entrance', cacheViews: true}")
 
-    h2 Products
-    ul.products.bare(data-bind='foreach: products')
-      li(data-bind='text: name')
 
-    h3 Software
-    ul.software.bare(data-bind='foreach: software')
-      li(data-bind='text: name')
 

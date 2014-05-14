@@ -10,8 +10,8 @@ nav.menu
   border-bottom: 1px solid darken(header-back-color, 90%)
 
   .branding
-    line-height header-height
-    font-size 30px
+    line-height (header-height / primary-header-font-size)
+    font-size primary-header-font-size
 
   a.branding
     text-decoration: none
@@ -31,14 +31,13 @@ nav.menu
 
       &.active
         a
-          span
-            border-bottom 3px solid secondary-accent-color
+          color highlight-accent-color
 
       a
         display inline-block
         padding 0 15px
         text-decoration none
-        font-size 20px
+        font-size secondary-header-font-size
 
         &:hover
           text-decoration: underline

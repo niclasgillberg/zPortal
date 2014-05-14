@@ -8,7 +8,8 @@
             title: 'Dashboard',
             moduleId: 'modules/dashboard/viewmodels/dashboard'
           }, {
-            route: 'products',
+            route: 'products*details',
+            hash: '#products',
             title: 'Products',
             moduleId: 'modules/products/viewmodels/productModule',
             nav: 1

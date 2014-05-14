@@ -21,7 +21,7 @@
 
   define(['durandal/system', 'durandal/app', 'durandal/viewLocator'], function(system, app, viewLocator) {
     system.debug(true);
-    app.title = 'Service Market';
+    app.title = 'zPortal';
     app.configurePlugins({
       router: true,
       widget: true,
