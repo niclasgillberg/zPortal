@@ -18,19 +18,19 @@ define ['plugins/router', 'knockoutEs5', '../models/product', '../models/softwar
           nav: 1
         ,
           route: 'resources'
-          moduleId: 'modules/resources/viewmodels/index'
+          moduleId: '../modules/products/modules/resources/viewmodels/index'
           title: 'Resources'
           icon: 'fa-user'
           nav: 2
         ,
           route: 'services'
-          moduleId: 'modules/services/viewmodels/index'
+          moduleId: '../modules/products/modules/services/viewmodels/index'
           title: 'Services'
           icon: 'fa-truck'
           nav: 3
         ,
           route: 'software'
-          moduleId: 'modules/software/viewmodels/index'
+          moduleId: '../modules/products/modules/software/viewmodels/index'
           title: 'Software'
           icon: 'fa-terminal'
           nav: 4

@@ -2,9 +2,9 @@ div
   header.clearfix
     h1 Products
 
-    form.pull-right.search-form
+    form.pull-right.search-form(data-bind='submit: search')
       .input-group
-        input.form-control(type='text', placeholder='Search', name='searchterm')
+        input.form-control(type='text', placeholder='Search', name='searchterm', data-bind='value: searchTerm')
         span.input-group-btn
           button.btn.btn-default(type='submit', name='submit')
             span.fa.fa-search
