@@ -27,12 +27,12 @@ module.exports = (grunt) ->
     copy:
       js:
         src: ['**/*.js']
-        dest: 'public/js/'
+        dest: 'build/client/js/'
         cwd: 'src/client/'
         expand: true
       html:
         src: ['**/*.html']
-        dest: 'public/js/'
+        dest: 'build/client/js/'
         cwd: 'src/client/'
         expand: true
       jade:
@@ -43,7 +43,7 @@ module.exports = (grunt) ->
     stylus:
       compile:
         files:
-          'public/css/application.css': ['src/client/styles/application.styl']
+          'build/client/css/application.css': ['src/client/styles/application.styl']
     watch:
       styles:
         files: 'src/client/styles/**/*.styl'
@@ -116,7 +116,7 @@ module.exports = (grunt) ->
         expand: true
         cwd: 'src/client'
         src: '**/*.coffee'
-        dest: 'public/js/'
+        dest: 'build/client/js/'
         ext: '.js'
         sourceMap: true
       server:
@@ -130,7 +130,7 @@ module.exports = (grunt) ->
         files: [
           cwd: 'src/client/'
           src: '**/*.jade'
-          dest: 'public/js/'
+          dest: 'build/client/js/'
           expand: true,
           ext: '.html'
         ]
