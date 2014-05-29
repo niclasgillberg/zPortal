@@ -1,0 +1,1 @@
+app = angular.module 'application', ['ngSanitize', 'user', 'mm.foundation']

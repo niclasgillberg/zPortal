@@ -1,0 +1,25 @@
+<div class="inner-wrap" ng-controller="ApplicationCtrl as app">
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">{{app.title}}</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="#">Menu</a>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ng-include src="'user/userinfo.html'" class="right"></ng-include>
+    </section>
+  </nav>
+
+  <aside class="right-off-canvas-menu">
+    <ng-include src="'user/messages-panel.html'"></ng-include>
+  </aside>
+
+  <section class="main-section">
+    <h1>{{app.title}}</h1>
+  </section>
+
+  <a class="exit-off-canvas"></a>
+</div>
