@@ -2,10 +2,15 @@ angular.module('user').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('user/messages-panel.html',
-    "<ul class=\"off-canvas-list\" ng-controller=\"user.MessagesCtrl as model\">\n" +
+    "<ul class=\"off-canvas-list messages\" ng-controller=\"user.MessagesCtrl as model\">\n" +
     "  <li><label>Messages</label></li>\n" +
     "  <li ng-repeat=\"message in model.messages\">\n" +
-    "    <a href=\"#\">The Psychohistorians</a>\n" +
+    "    <div class=\"{{message.type}}\">\n" +
+    "      <a href=\"#\">{{message.from}}</a>\n" +
+    "      <div class=\"content\">\n" +
+    "        {{message.content}}\n" +
+    "      </div>\n" +
+    "    </div>\n" +
     "  </li>\n" +
     "</ul>"
   );

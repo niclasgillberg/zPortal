@@ -1,6 +1,6 @@
 app.controller 'user.MessagesCtrl', [
   'MessageSvc'
   class MessagesCtrl
-    contructor: (messageSvc) ->
+    constructor: (messageSvc) ->
       @messages = messageSvc.getMessages()
 ]

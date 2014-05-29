@@ -5,11 +5,9 @@
 
   app.controller('user.MessagesCtrl', [
     'MessageSvc', MessagesCtrl = (function() {
-      function MessagesCtrl() {}
-
-      MessagesCtrl.prototype.contructor = function(messageSvc) {
-        return this.messages = messageSvc.getMessages();
-      };
+      function MessagesCtrl(messageSvc) {
+        this.messages = messageSvc.getMessages();
+      }
 
       return MessagesCtrl;
 
