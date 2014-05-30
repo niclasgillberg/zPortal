@@ -2,14 +2,35 @@
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="#">{{app.title}}</a></h1>
+        <h1><a ui-sref="home">{{app.title}}</a></h1>
       </li>
       <li class="toggle-topbar menu-icon">
         <a href="#">Menu</a>
       </li>
     </ul>
     <section class="top-bar-section">
+      <ul class="left">
+        <li class="divider"></li>
+        <li>
+          <a ui-sref="products">Products</a>
+        </li>
+        <li>
+          <a ui-sref="services">Services</a>
+        </li>
+        <li>
+          <a ui-sref="resources">Resources</a>
+        </li>
+      </ul>
       <ng-include src="'user/userinfo.html'" class="right"></ng-include>
+      <ul class="right">
+        <li>
+          <a ui-sref="history">History</a>
+        </li>
+        <li>
+          <a ui-sref="approvals">My Approvals</a>
+        </li>
+        <li class="divider"></li>
+      </ul>
     </section>
   </nav>
 
@@ -17,8 +38,7 @@
     <ng-include src="'user/messages-panel.html'"></ng-include>
   </aside>
 
-  <section class="main-section">
-    <h1>{{app.title}}</h1>
+  <section class="main-section" ui-view>
   </section>
 
   <a class="exit-off-canvas"></a>

@@ -16,6 +16,11 @@ angular.module('user').run(['$templateCache', function($templateCache) {
   );
 
 
+  $templateCache.put('user/profile.html',
+    "<div>This is the profile</div>"
+  );
+
+
   $templateCache.put('user/userinfo.html',
     "<div class=\"user-info\" ng-controller=\"user.UserInfoCtrl as userinfo\">\n" +
     "  <div class=\"username\">{{userinfo.name}}</div>\n" +

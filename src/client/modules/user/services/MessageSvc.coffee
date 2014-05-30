@@ -4,8 +4,8 @@ app.service 'MessageSvc', [
 
     getMessages: () ->
       [
-        from: 'Thor'
+        from: 'Jane Doe'
         type: 'message'
-        content: 'Can I borrow your reactor? I need to charge my hammer...'
+        content: 'Who are you?'
       ]
 ]

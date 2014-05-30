@@ -17,7 +17,7 @@
   app.controller('user.UserInfoCtrl', [
     'MessageSvc', UserInfoCtrl = (function() {
       function UserInfoCtrl(messageSvc) {
-        this.name = 'Tony Stark';
+        this.name = 'John Doe';
         this.messages = messageSvc.getMessages();
       }
 
@@ -33,9 +33,9 @@
       MessageSvc.prototype.getMessages = function() {
         return [
           {
-            from: 'Thor',
+            from: 'Jane Doe',
             type: 'message',
-            content: 'Can I borrow your reactor? I need to charge my hammer...'
+            content: 'Who are you?'
           }
         ];
       };

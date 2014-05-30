@@ -2,6 +2,6 @@ app.controller 'user.UserInfoCtrl', [
   'MessageSvc'
   class UserInfoCtrl
     constructor: (messageSvc) ->
-      @name = 'Tony Stark'
+      @name = 'John Doe'
       @messages = messageSvc.getMessages()
 ]
