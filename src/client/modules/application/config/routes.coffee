@@ -2,10 +2,10 @@ app.config [
   '$stateProvider',
   '$urlRouterProvider',
   (state, routerProvider) ->
-    routerProvider.otherwise ''
+    routerProvider.otherwise '/'
 
     state.state 'home',
-      url: ''
+      url: '/'
       templateUrl: 'dashboard/index.html'
     .state 'products',
       url: '/products'
@@ -25,4 +25,5 @@ app.config [
     .state 'profile',
       url: '/profile'
       templateUrl: 'user/profile.html'
+    return
 ]

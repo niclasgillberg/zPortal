@@ -5,9 +5,9 @@
 
   app.config([
     '$stateProvider', '$urlRouterProvider', function(state, routerProvider) {
-      routerProvider.otherwise('');
-      return state.state('home', {
-        url: '',
+      routerProvider.otherwise('/');
+      state.state('home', {
+        url: '/',
         templateUrl: 'dashboard/index.html'
       }).state('products', {
         url: '/products',
