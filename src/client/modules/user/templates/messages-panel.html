@@ -1,0 +1,11 @@
+<ul class="off-canvas-list messages" ng-controller="user.MessagesCtrl as model">
+  <li><label>Messages</label></li>
+  <li ng-repeat="message in model.messages">
+    <div class="{{message.type}}">
+      <a href="#">{{message.from}}</a>
+      <div class="content">
+        {{message.content}}
+      </div>
+    </div>
+  </li>
+</ul>
