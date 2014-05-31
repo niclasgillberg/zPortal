@@ -1,7 +1,0 @@
-.messageBox(data-view="plugins/messageBox")
-  .modal-header
-    h3(data-bind="text: title")
-  .modal-body
-    p.message(data-bind="text: message")
-  .modal-footer(data-bind="foreach: options")
-    button.btn(data-bind="click: function () { $parent.selectOption($data); }, text: $data, css: { 'btn-primary': $index() == 0, autofocus: $index() == 0 }")
