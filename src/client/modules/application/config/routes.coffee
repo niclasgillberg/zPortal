@@ -27,3 +27,9 @@ app.config [
       templateUrl: 'user/profile.html'
     return
 ]
+
+app.run [
+  '$state',
+  (state) ->
+
+]

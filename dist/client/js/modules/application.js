@@ -31,6 +31,8 @@
     }
   ]);
 
+  app.run(['$state', function(state) {}]);
+
   app.controller('ApplicationCtrl', [
     function() {
       return this.title = "zPortal";
